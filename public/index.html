@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anonymous Chatroom</title>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; }
+    #chat { max-width: 600px; margin: 20px auto; background: white; padding: 10px; border-radius: 10px; }
+    #messages { list-style: none; padding: 0; max-height: 300px; overflow-y: auto; }
+    #messages li { padding: 5px; border-bottom: 1px solid #eee; }
+    #form { display: flex; margin-top: 10px; }
+    #input { flex: 1; padding: 10px; }
+    button { padding: 10px; }
+  </style>
+</head>
+<body>
+  <div id="chat">
+    <ul id="messages"></ul>
+    <form id="form">
+      <input id="input" autocomplete="off" placeholder="Type a message..." />
+      <button>Send</button>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script> <!-- keep your JS in a separate file -->
+</body>
+</html>
